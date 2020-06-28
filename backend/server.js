@@ -1,6 +1,5 @@
 import express from 'express';
 import data from './data';
-const http = require('http');
 
 const app = express();
 // app.use(bodyParser.json());
@@ -11,9 +10,6 @@ app.get("/api/products", (req, res) => {
 })
 
 // Set Port
-const port = process.env.PORT || '4000';
-app.set('port', port);
-
-const server = http.createServer(app);
-
-server.listen(port, () => console.log(`Running on port ${port}`));
+app.listen(4000, () => {
+    console.log("Server started at http://localhost:4000")
+})
