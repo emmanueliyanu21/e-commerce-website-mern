@@ -7,7 +7,7 @@ const HomeScreen = (props) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const {data} = await axios.get("/api/products");
+            const { data } = await axios.get('/api/products');
             setProduct(data);
         }
         fetchData();
@@ -16,7 +16,7 @@ const HomeScreen = (props) => {
         }
     }, [])
 
-    return (    
+    return (
         <ul className="products">
             {
                 products.map(product =>
